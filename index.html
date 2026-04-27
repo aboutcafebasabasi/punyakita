@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aboutcafebasabasi💖</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Favicon romantis -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%23ff6b9e%22/><text x=%2250%22 y=%2258%22 text-anchor=%22middle%22 font-size=%2230%22 fill=%22white%22>❤️</text></svg>">
+  <!-- Music CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- 🌙 Romantic Loading Screen (dengan efek surat terbuka) 
+  <div id="romanticLoader">
+    <div class="loader-content">
+      <div class="envelope">
+        <div class="letter"></div>
+        <div class="heart pulse"></div>
+      </div>
+      <p>Menyusun kisah cinta untukmu... 💕</p>
+      <div class="dots">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+  -->
+  
+  <!-- 🌟 Navbar dengan efek glow & ikon berkedip -->
+  <nav class="navbar">
+    <div class="nav-brand">💌 aboutcafebasabasi</div>
+    <ul class="nav-links">
+      <li><a href="#home"><i class="fas fa-home beat"></i> Beranda</a></li>
+      <li><a href="#video"><i class="fas fa-video heart-icon"></i> Video</a></li>
+      <li><a href="#timeline"><i class="fas fa-history spark"></i> Perjalanan</a></li>
+      <li><a href="#gallery"><i class="fas fa-images float"></i> Kenangan</a></li>
+      <li><a href="#sosial"><i class="fas fa-heart pulse"></i> Sosial</a></li>
+    </ul>
+    <button class="music-toggle" id="musicToggle" title="Putar Musik">
+      <i class="fas fa-music"></i>
+    </button>
+    <!-- Music Selector 
+    <div class="music-selector" id="musicSelector">
+      <select id="musicSelect">
+        <option value="asset/music/suratcinta.mp3">Surat Cinta</option>
+        <option value="asset/music/nempek.mp3">Bergema</option>
+      </select>
+      <button id="musicChangeBtn">Ganti Lagu</button>
+    </div>
+    -->
+  </nav>
+
+  <!-- 🌌 Background: Bintang + Partikel Hati Mengalir -->
+  <div id="stars"></div>
+  <div id="floating-hearts"></div>
+
+  <!-- 📜 Home Section — seperti surat terbuka -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Kepadamu, Cintaku</h1>
+      <p class="subtitle">Di antara jutaan detik waktu, aku bersyukur Tuhan memilihmu untukku.</p>
+      <div class="btn-group">
+        <button class="btn-glow" onclick="scrollToSection('#video')">Tonton Video Cinta Kita</button>
+        <button class="btn-outline" onclick="scrollToSection('#sosial')">
+          <i class="fas fa-pen"></i> Temukan Kita Berdua
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🎬 Video Section — dengan efek "layar bioskop" -->
+  <section id="video" class="section video-section">
+    <div class="container">
+      <h2 class="section-title">Film Cinta Kita</h2>
+      <p class="section-subtitle">Dibuat dengan cinta, satu frame demi satu...</p>
+
+      <!-- Video Player -->
+      <div class="video-player-wrapper">
+        <div class="video-frame">
+          <video id="loveVideo" controls autoplay muted playsinline>
+            <source src="asset/video/blabla.mp4" type="video/mp4">
+            Browser Anda tidak mendukung pemutaran video.
+          </video>
+          <div class="film-strip-top"></div>
+          <div class="film-strip-bottom"></div>
+        </div>
+      </div>
+
+      <!-- Video Form 
+      <div class="video-form-container">
+        <p class="form-note">Tambahkan video lainnya:</p>
+        <form id="videoForm" class="video-form">
+          <input type="text" id="videoUrl" placeholder="Contoh: https://youtu.be/abc123 atau asset/video/cinta.mp4" />
+          <button type="submit" class="btn-glow small">Tambah Video</button>
+        </form>
+      </div>
+      -->
+
+      <!-- Video List -->
+      <div class="video-list">
+        <div class="video-item">
+          <div class="video-preview">
+            <video controls>
+              <source src="asset/video/bliblibli.mp4" type="video/mp4">
+            </video>
+          </div>
+          
+        </div>
+        <div class="video-item">
+          <div class="video-preview">
+            <video controls>
+              <source src="asset/video/blobloblo.mp4" type="video/mp4">
+            </video>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📅 Timeline — Desain Buku Harian dengan Halaman Bergilir -->
+  <section id="timeline" class="section">
+    <div class="container">
+      <h2 class="section-title">Buku Harian Kita</h2>
+      <p class="section-subtitle">Setiap halaman adalah kenangan yang tak tergantikan</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">✨ April 2026</div>
+          <div class="timeline-content">
+            <h3>Pertemuan Pertama</h3>
+            <p>Kita bertemu di sebuah sore menuju malam yang tak terduga. kamu tersenyum, dan dunia terasa lebih hangat</p>
+            <div class="page-corner">→</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">🌸 21 April 2026</div>
+          <div class="timeline-content">
+            <h3>Kata Pertama: "kamu mau ga ngejalani hubungan yang serius dari sebelumnya?"</h3>
+            <p>Di situ hati merasa deg degan karna sesuatu hubungan yang baik harus di susun dengan rapi dan benar, rasa sayang emang harus dibuktikan, saling percaya, dan saling jujur.</p>
+            <div class="page-corner">→</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">💫 seterusnya </div>
+          <div class="timeline-content">
+            <h3>Bersama, Setiap Hari</h3>
+            <p>
+              Merasakan apa itu cinta dan hubungan yang sehat tidak toxic dan saling melengkapi, merasa nyaman berdua, ngobrol sharing sharing, semoga hubungan ini awet terus sampai jadi jadi serius aamiin.
+            </p>
+            <div class="page-corner">→</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📸 Gallery — dengan efek "album foto lama" -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2 class="section-title">Album Foto Kita</h2>
+      <p class="section-subtitle">Setiap gambar adalah puisi yang tertangkap dalam cahaya</p>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="photo-frame">
+            <img src="asset/img/1.jpg" alt="Pertama kali foto">
+            <div class="caption">Pertama kali foto</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="photo-frame">
+            <img src="asset/img/2.jpg" alt="Pertama kali foto">
+            <div class="caption">Pertama kali foto</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="photo-frame">
+            <img src="asset/img/3.jpg" alt="Pertama kali foto">
+            <div class="caption">Pertama kali foto</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="photo-frame">
+            <img src="asset/img/4.jpg" alt="Pertama kali foto">
+            <div class="caption">Pertama kali foto</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="photo-frame">
+            <img src="asset/img/5.jpg" alt="Pertama kali foto">
+            <div class="caption">Pertama kali foto</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="photo-frame">
+            <img src="asset/img/6.jpg" alt="Pertama kali foto">
+            <div class="caption">Pertama kali foto</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="photo-frame">
+            <img src="asset/img/7.jpg" alt="Pertama kali foto">
+            <div class="caption">Pertama kali foto</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="photo-frame">
+            <img src="asset/img/8.jpg" alt="Pertama kali foto">
+            <div class="caption">Pertama kali foto</div>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="photo-frame">
+            <img src="asset/img/9.jpg" alt="Pertama kali foto">
+            <div class="caption">Pertama kali foto</div>
+          </div>
+        </div>
+        </div>
+      </div>
+    
+      
+  </section>
+
+  <!-- 🌸 Social Media Section -->
+  <section id="sosial" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Folow Kami Berdua</h2>
+      <p class="section-subtitle">Temukan Kami di platform digital</p>
+      
+      <div class="social-links-container">
+        <!-- 
+        <a href="https://github.com/prayfornicetry" target="_blank" class="social-link">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        -->
+        <!--
+        <a href="https://www.tiktok.com/@prayfornicetry" target="_blank" class="social-link">
+          <i class="fab fa-tiktok"></i>
+          <span>TikTok</span>
+        </a>
+        -->
+        <a href="https://instagram.com/aboutcafebasabasi" target="_blank" class="social-link">
+          <i class="fab fa-instagram"></i>
+          <span>Instagram</span>
+        </a>
+        <!--
+        <a href="https://linkedin.com/in/prayfornicetry" target="_blank" class="social-link">
+          <i class="fab fa-linkedin-in"></i>
+          <span>LinkedIn</span>
+        </a>
+        -->
+      </div>
+      
+      <!-- 
+      <div class="social-contact">
+        <p><i class="fas fa-envelope"></i> tumbalgameee@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +62 812-3456-7890</p>
+        <p><i class="fas fa-map-marker-alt"></i> Yogyakarta, Indonesia</p>
+      </div>
+      -->
+    </div>
+  </section>
+
+  <!-- 🌹 Footer — dengan kalimat penutup puitis -->
+  <footer>
+    <div class="container">
+      <p>“Cinta bukan tentang seberapa lama kita bersama,<br>melainkan seberapa dalam kita saling mengenal.”</p>
+      <p class="signature">— Dibuat dengan ❤️ oleh seseorang yang selalu memikirkanmu • April 2026</p>
+    </div>
+  </footer>
+
+  <!-- Audio -->
+  <audio id="bgMusic" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
